@@ -31,7 +31,21 @@ class AdminController extends CI_Controller {
 		$this->load->view('admin/admin_template', $data);
 	}
 
+	public function dashboard()
+	{
+		
+		$data['view'] = 'dashboard';
+		$this->load->view('admin/admin_template', $data);
+	}
 
-	
+	public function form()
+	{
+		
+		$data['view'] = 'form';
+		$this->load->view('admin/admin_template', $data);
+	}
+
+
+
 		
 }

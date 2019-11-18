@@ -57,3 +57,5 @@ $route['login'] = 'Usercontroller';
 
 
 $route['admin'] = 'AdminController';
+$route['dashboard'] = 'AdminController/dashboard';
+$route['form'] = 'AdminController/form';
