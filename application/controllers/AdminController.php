@@ -26,6 +26,23 @@ class AdminController extends CI_Controller {
 
 	public function index()
 	{
+		// if (!isset($_SERVER['PHP_AUTH_USER'])) {
+		//     header('WWW-Authenticate: Basic realm="My Realm"');
+		//     header('HTTP/1.0 401 Unauthorized');
+		//     echo 'Text to send if user hits Cancel button';
+		//     exit;
+		// } else {
+		//     echo "<p>Hello {$_SERVER['PHP_AUTH_USER']}.</p>";
+		//     echo "<p>You entered {$_SERVER['PHP_AUTH_PW']} as your password.</p>";
+		// }
+
+		if (!isset($_SERVER['PHP_AUTH_USER']) && !isset($_SERVER['PHP_AUTH_PW'] )) {
+			header('WWW-Authenticate: Basic realm="My Realm"');
+		    header('HTTP/1.0 401 Unauthorized');		
+		}else{
+			
+			echo "string";	
+		}
 		
 		$data['view'] = 'login';
 		$this->load->view('admin/admin_template', $data);

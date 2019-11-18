@@ -21,6 +21,7 @@ class Usercontroller extends CI_Controller {
 	function __construct()
     {
     	parent::__construct(); // construct the Model class
+    	header('Content-Type: application/json');
     	$this->load->database();
     }
 
@@ -28,25 +29,25 @@ class Usercontroller extends CI_Controller {
 	{
 		// echo phpinfo();
 		// die;
-		$where = 'Bank_Name=CIMB BANK BERHAD';
-		$where  = array('Bank_Name=' => 'CIMB BANK BERHAD');
-		$orderby = 'id asc';
-		$query = $this->getTableData('Ref_Nama_Bank','',$where,$orderby,'10');
-		$message = array(
-			'###DATE###' => date('YYYY-MM-dd'),
-			'###LINK###'    => 'htttp://google.com'
-		);
-		$data = array(
-			'Bank_Name' =>'xzy',
-			'Bank_Code' =>2,
-			'Status' => 'A'
-		);
-		$where  = array('id=' =>51, );
+		// $where = 'Bank_Name=CIMB BANK BERHAD';
+		// $where  = array('Bank_Name=' => 'CIMB BANK BERHAD');
+		// $orderby = 'id asc';
+		// $query = $this->getTableData('Ref_Nama_Bank','',$where,$orderby,'10');
+		// $message = array(
+		// 	'###DATE###' => date('YYYY-MM-dd'),
+		// 	'###LINK###'    => 'htttp://google.com'
+		// );
+		// $data = array(
+		// 	'Bank_Name' =>'xzy',
+		// 	'Bank_Code' =>2,
+		// 	'Status' => 'A'
+		// );
+		// $where  = array('id=' =>51, );
 		//$update = $this->UpdateTableData('Dummy_Table',$data,$where);
 		//print_r($update);
-		$select = $this->dateDiff('2014-06-06 21:35:55');
-		print_r($select);
-		die;
+		// $select = $this->dateDiff('2014-06-06 21:35:55');
+		// print_r($select);
+		// die;
 
 		// $insert = $this->InsertTableData('Dummy_Table',$data);
 		// print_r($insert);
@@ -60,7 +61,7 @@ class Usercontroller extends CI_Controller {
 		// {
 		//     echo $row->Bank_Name;echo "<br>";
 		// }
-		die;
+		// die;
 		$body = file_get_contents('php://input');
 		$object = json_decode($body,TRUE);		
 		$username =  $object['username'];
