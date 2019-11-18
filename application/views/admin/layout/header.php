@@ -55,6 +55,7 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.selection.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.resize.min.js"></script>
+        <script src="https://cdn.ckeditor.com/4.13.0/standard/ckeditor.js"></script>
         <!--Bootstrap -->
         <script src="<?php echo base_url('assets/lib/bootstrap/js/bootstrap.js')?>"></script>
         <!-- MetisMenu -->
@@ -67,6 +68,9 @@
         <script src="<?php echo base_url('assets/js/core.js')?>"></script>
         <!-- Metis demo scripts -->
         <script src="<?php echo base_url('assets/js/app.js')?>"></script>
+        <link rel="stylesheet" href="<?php echo base_url('assets/css/style-switcher.css')?>">
+        <link rel="stylesheet/less" type="text/css" href="<?php echo base_url('assets/less/theme.less')?>">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.7.1/less.js"></script>
         <script>
         $(function() {
         Metis.dashboard();
@@ -88,4 +92,12 @@
         });
         })(jQuery);
         </script>
+        <script>
+        less = {
+        env: "development",
+        relativeUrls: false,
+        rootpath: "/assets/"
+        };
+        </script>
+        
     </head>

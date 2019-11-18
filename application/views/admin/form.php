@@ -61,6 +61,13 @@
 											data-color="rgb(255, 255, 255)">Change background color</a>
 										</div>
 									</div>
+									<div class="form-group">
+										<label for="cp3" class="control-label col-lg-4">Using events to work with the color</label>
+										<div class="col-lg-6">
+											<textarea id="ckd" name="ckd"></textarea>
+										</div>
+										
+									</div>
 								</form>
 							</div>
 							<!-- /.BODY -->
@@ -80,3 +87,6 @@
 	</div>
 	<!-- /.outer -->
 </div>
+<script type="text/javascript">
+		CKEDITOR.replace( 'ckd' );
+</script>
