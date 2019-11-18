@@ -43,7 +43,7 @@
 			<ul class="list-inline">
 			<li><a class="text-muted" href="#login" data-toggle="tab">Login</a></li>
 			<li><a class="text-muted" href="#forgot" data-toggle="tab">Forgot Password</a></li>
-			<li><a class="text-muted" href="#signup" data-toggle="tab">Signup</a></li>
+			<!-- <li><a class="text-muted" href="#signup" data-toggle="tab">Signup</a></li> -->
 			</ul>
 		</div>
 	</div>
@@ -55,15 +55,8 @@ $(function() {
   $("form[name='login']").validate({
     // Specify validation rules
     rules: {
-      // The key name on the left side is the name attribute
-      // of an input field. Validation rules are defined
-      // on the right side
-      // firstname: "required",
-      // lastname: "required",
       Username: {
         required: true,
-        // Specify that email should be validated
-        // by the built-in "email" rule
         email: true
       },
       Password: {

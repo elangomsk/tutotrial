@@ -30,5 +30,8 @@ class AdminController extends CI_Controller {
 		$data['view'] = 'login';
 		$this->load->view('admin/admin_template', $data);
 	}
+
+
+	
 		
 }
