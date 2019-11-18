@@ -10,11 +10,11 @@
 				    <p class="text-muted text-center">
 				        Enter your username and password
 				    </p>
-				    <input type="text" id="Username" name="Username" placeholder="Username" class="form-control top">
+				    <input type="email" id="Username" name="Username" placeholder="Username" class="form-control top">
 				    <input type="password" id="Password" name="Password" placeholder="Password" class="form-control bottom">
 				    <div class="checkbox">
 						<label>
-							<input type="checkbox"> Remember Me
+							<input id="Remember" name="Remember" type="checkbox"> Remember Me
 						</label>
 					</div>
 					    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
