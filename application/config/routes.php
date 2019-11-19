@@ -55,7 +55,9 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['login'] = 'Usercontroller';
 
+$admin = 'velankatgo';
 
-$route['admin'] = 'AdminController';
-$route['dashboard'] = 'AdminController/dashboard';
-$route['form'] = 'AdminController/form';
+$route[$admin] = 'AdminController';
+$route[$admin.'/dashboard'] = 'AdminController/dashboard';
+$route[$admin.'/form'] = 'AdminController/form';
+$route[$admin.'/test'] = 'AdminController/test';

@@ -16,22 +16,22 @@
         <meta name="msapplication-TileImage" content="<?php echo base_url('assets/img/metis-tile.png');?>" />
         
         <!-- Bootstrap -->
-        <link rel="stylesheet" href="<?php echo base_url('assets/lib/bootstrap/css/bootstrap.css')?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/lib/bootstrap/css/bootstrap.css');?>">
         
         <!-- Font Awesome -->
-        <link rel="stylesheet" href="<?php echo base_url('assets/lib/font-awesome/css/font-awesome.css')?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/lib/font-awesome/css/font-awesome.css');?>">
         
         <!-- Metis core stylesheet -->
-        <link rel="stylesheet" href="<?php echo base_url('assets/css/main.css')?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/css/main.css');?>">
         
         <!-- metisMenu stylesheet -->
-        <link rel="stylesheet" href="<?php echo base_url('assets/lib/metismenu/metisMenu.css')?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/lib/metismenu/metisMenu.css');?>">
         
         <!-- onoffcanvas stylesheet -->
-        <link rel="stylesheet" href="<?php echo base_url('assets/lib/onoffcanvas/onoffcanvas.css')?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/lib/onoffcanvas/onoffcanvas.css');?>">
         
         <!-- animate.css stylesheet -->
-        <link rel="stylesheet" href="<?php echo base_url('assets/lib/animate.css/animate.css')?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/lib/animate.css/animate.css');?>">
 
 
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.5/fullcalendar.min.css">
@@ -42,11 +42,26 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
         <!--jQuery -->
-        <script src="<?php echo base_url('assets/lib/jquery/jquery.js')?>"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script>
+        
         <!--Bootstrap -->
-        <script src="<?php echo base_url('assets/lib/bootstrap/js/bootstrap.js')?>"></script>
-        <script src="assets/lib/jquery/jquery.js"></script>
+        
+        <!-- <script src="<?php echo base_url('assets/lib/jquery/jquery.js');?>"></script> -->
+        
+        
+       
+        <script src="<?php echo base_url('assets/js/style-switcher.js');?>"></script>
+        
+       <!--  <script>
+        less = {
+        env: "development",
+        relativeUrls: false,
+        rootpath: "<?php echo base_url('assets/');?>"
+        };
+        </script> -->
+        
+        <script src="<?php echo base_url('assets/lib/jquery/jquery.js');?>"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script>
+        <script src="<?php echo base_url('assets/lib/bootstrap/js/bootstrap.js');?>"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.5/fullcalendar.min.js"></script>
@@ -57,26 +72,20 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.resize.min.js"></script>
         <script src="https://cdn.ckeditor.com/4.13.0/standard/ckeditor.js"></script>
         <!--Bootstrap -->
-        <script src="<?php echo base_url('assets/lib/bootstrap/js/bootstrap.js')?>"></script>
+        <script src="<?php echo base_url('assets/lib/bootstrap/js/bootstrap.js');?>"></script>
         <!-- MetisMenu -->
-        <script src="<?php echo base_url('assets/lib/metismenu/metisMenu.js')?>"></script>
+        <script src="<?php echo base_url('assets/lib/metismenu/metisMenu.js');?>"></script>
         <!-- onoffcanvas -->
-        <script src="<?php echo base_url('assets/lib/onoffcanvas/onoffcanvas.js')?>"></script>
+        <script src="<?php echo base_url('assets/lib/onoffcanvas/onoffcanvas.js');?>"></script>
         <!-- Screenfull -->
-        <script src="<?php echo base_url('assets/lib/screenfull/screenfull.js')?>"></script>
+        <script src="<?php echo base_url('assets/lib/screenfull/screenfull.js');?>"></script>
         <!-- Metis core scripts -->
-        <script src="<?php echo base_url('assets/js/core.js')?>"></script>
+        <script src="<?php echo base_url('assets/js/core.js');?>"></script>
         <!-- Metis demo scripts -->
-        <script src="<?php echo base_url('assets/js/app.js')?>"></script>
-        <link rel="stylesheet" href="<?php echo base_url('assets/css/style-switcher.css')?>">
-        <link rel="stylesheet/less" type="text/css" href="<?php echo base_url('assets/less/theme.less')?>">
+        <script src="<?php echo base_url('assets/js/app.js');?>"></script>
+        <link rel="stylesheet" href="<?php echo base_url('assets/css/style-switcher.css');?>">
+        <link rel="stylesheet/less" type="text/css" href="<?php echo base_url('assets/less/theme.less');?>">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.7.1/less.js"></script>
-        <script>
-        $(function() {
-        Metis.dashboard();
-        });
-        </script>
-        <script src="assets/js/style-switcher.js"></script>
         <script type="text/javascript">
         (function($) {
         $(document).ready(function() {
@@ -92,12 +101,5 @@
         });
         })(jQuery);
         </script>
-        <script>
-        less = {
-        env: "development",
-        relativeUrls: false,
-        rootpath: "/assets/"
-        };
-        </script>
-        
+
     </head>

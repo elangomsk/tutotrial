@@ -2533,3 +2533,8 @@ body.error .logo h1 {
   border-top-right-radius: 0;
 }
 /* END LOGIN PAGE STYLES */
+
+
+.error{
+  color: red;
+}

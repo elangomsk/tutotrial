@@ -22,6 +22,8 @@ class AdminController extends CI_Controller {
     {
     	parent::__construct(); // construct the Model class
     	$this->load->database();
+    	$this->load->model('common_model');
+    	$this->load->model('email_model');
     }
 
 	public function index()
@@ -36,16 +38,31 @@ class AdminController extends CI_Controller {
 		//     echo "<p>You entered {$_SERVER['PHP_AUTH_PW']} as your password.</p>";
 		// }
 
-		if (!isset($_SERVER['PHP_AUTH_USER']) && !isset($_SERVER['PHP_AUTH_PW'] )) {
-			header('WWW-Authenticate: Basic realm="My Realm"');
-		    header('HTTP/1.0 401 Unauthorized');		
-		}else{
+		// if (!isset($_SERVER['PHP_AUTH_USER']) && !isset($_SERVER['PHP_AUTH_PW'] )) {
+		// 	header('WWW-Authenticate: Basic realm="My Realm"');
+		//     header('HTTP/1.0 401 Unauthorized');		
+		// }else{
 			
-			echo "string";	
+		// 	echo "string";	
+		// }
+		try{
+
+
+
+			$data['view'] = 'login';
+			// throw new Exception('test');
+			$this->load->view('admin/admin_template', $data);
+
+
+		}catch(Exception $e){
+			print "something went wrong, caught yah! n";
+			var_dump($e->getMessage());
+			die;
 		}
-		
-		$data['view'] = 'login';
-		$this->load->view('admin/admin_template', $data);
+
+
+		// $data['view'] = 'login';
+		// $this->load->view('admin/admin_template', $data);
 	}
 
 	public function dashboard()
@@ -60,6 +77,13 @@ class AdminController extends CI_Controller {
 		
 		$data['view'] = 'form';
 		$this->load->view('admin/admin_template', $data);
+	}
+
+
+	public function test(){
+
+		$data['view'] = 'form';
+		$this->load->view('admin/test');
 	}
 
 
