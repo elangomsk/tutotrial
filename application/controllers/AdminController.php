@@ -24,6 +24,7 @@ class AdminController extends CI_Controller {
     	$this->load->database();
     	$this->load->model('common_model');
     	$this->load->model('email_model');
+    	$this->load->helper('common_helper');
     }
 
 	public function index()
@@ -47,8 +48,10 @@ class AdminController extends CI_Controller {
 		// }
 		try{
 
-
-
+			echo encrypt1('test');
+			die;
+			$username = $this->input->post('Username');
+			$password = $this->input->post('Password');
 			$data['view'] = 'login';
 			// throw new Exception('test');
 			$this->load->view('admin/admin_template', $data);

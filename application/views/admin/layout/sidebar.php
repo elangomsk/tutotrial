@@ -431,6 +431,126 @@
             </li>
           </ul>
         </li>
+        <li class="nav-divider"></li>
+        <li>
+          <a href="login.html">
+            <i class="fa fa-sign-in"></i>
+            <span class="link-title">
+              Login Page
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;">
+            <i class="fa fa-code"></i>
+            <span class="link-title">
+              Unlimited Level Menu
+            </span>
+            <span class="fa arrow"></span>
+          </a>
+          <ul class="collapse">
+            <li>
+              <a href="javascript:;">Level 1  <span class="fa arrow"></span>  </a>
+              <ul class="collapse">
+                <li> <a href="javascript:;">Level 2</a>  </li>
+                <li> <a href="javascript:;">Level 2</a>  </li>
+                <li>
+                  <a href="javascript:;">Level 2  <span class="fa arrow"></span>  </a>
+                  <ul class="collapse">
+                    <li> <a href="javascript:;">Level 3</a>  </li>
+                    <li> <a href="javascript:;">Level 3</a>  </li>
+                    <li>
+                      <a href="javascript:;">Level 3  <span class="fa arrow"></span>  </a>
+                      <ul class="collapse">
+                        <li> <a href="javascript:;">Level 4</a>  </li>
+                        <li> <a href="javascript:;">Level 4</a>  </li>
+                        <li>
+                          <a href="javascript:;">Level 4  <span class="fa arrow"></span>  </a>
+                          <ul class="collapse">
+                            <li> <a href="javascript:;">Level 5</a>  </li>
+                            <li> <a href="javascript:;">Level 5</a>  </li>
+                            <li> <a href="javascript:;">Level 5</a>  </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li> <a href="javascript:;">Level 4</a>  </li>
+                  </ul>
+                </li>
+                <li> <a href="javascript:;">Level 2</a>  </li>
+              </ul>
+            </li>
+            <li> <a href="javascript:;">Level 1</a>  </li>
+            <li>
+              <a href="javascript:;">Level 1  <span class="fa arrow"></span>  </a>
+              <ul class="collapse">
+                <li> <a href="javascript:;">Level 2</a>  </li>
+                <li> <a href="javascript:;">Level 2</a>  </li>
+                <li> <a href="javascript:;">Level 2</a>  </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-divider"></li>
+        <li>
+          <a href="login.html">
+            <i class="fa fa-sign-in"></i>
+            <span class="link-title">
+              Login Page
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;">
+            <i class="fa fa-code"></i>
+            <span class="link-title">
+              Unlimited Level Menu
+            </span>
+            <span class="fa arrow"></span>
+          </a>
+          <ul class="collapse">
+            <li>
+              <a href="javascript:;">Level 1  <span class="fa arrow"></span>  </a>
+              <ul class="collapse">
+                <li> <a href="javascript:;">Level 2</a>  </li>
+                <li> <a href="javascript:;">Level 2</a>  </li>
+                <li>
+                  <a href="javascript:;">Level 2  <span class="fa arrow"></span>  </a>
+                  <ul class="collapse">
+                    <li> <a href="javascript:;">Level 3</a>  </li>
+                    <li> <a href="javascript:;">Level 3</a>  </li>
+                    <li>
+                      <a href="javascript:;">Level 3  <span class="fa arrow"></span>  </a>
+                      <ul class="collapse">
+                        <li> <a href="javascript:;">Level 4</a>  </li>
+                        <li> <a href="javascript:;">Level 4</a>  </li>
+                        <li>
+                          <a href="javascript:;">Level 4  <span class="fa arrow"></span>  </a>
+                          <ul class="collapse">
+                            <li> <a href="javascript:;">Level 5</a>  </li>
+                            <li> <a href="javascript:;">Level 5</a>  </li>
+                            <li> <a href="javascript:;">Level 5</a>  </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li> <a href="javascript:;">Level 4</a>  </li>
+                  </ul>
+                </li>
+                <li> <a href="javascript:;">Level 2</a>  </li>
+              </ul>
+            </li>
+            <li> <a href="javascript:;">Level 1</a>  </li>
+            <li>
+              <a href="javascript:;">Level 1  <span class="fa arrow"></span>  </a>
+              <ul class="collapse">
+                <li> <a href="javascript:;">Level 2</a>  </li>
+                <li> <a href="javascript:;">Level 2</a>  </li>
+                <li> <a href="javascript:;">Level 2</a>  </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
       </ul>
         <!-- /#menu -->
     </div>
