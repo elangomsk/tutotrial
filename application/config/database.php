@@ -75,12 +75,12 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => '192.168.0.44\DEVKOOPDB',
-	'username' => 'sa',
-	'password' => 'Koop@2017',
-	'database' => 'koopimsc_Finance',
-	'dbdriver' => 'sqlsrv',
-	'dbprefix' => '',
+	'hostname' => 'localhost', //192.168.0.44\DEVKOOPDB
+	'username' => 'root', //sa
+	'password' => '', //Koop@2017
+	'database' => 'tutorial',//koopimsc_Finance
+	'dbdriver' => 'mysqli', // sqlsrv
+	'dbprefix' => 'tut',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
 	'cache_on' => FALSE,
