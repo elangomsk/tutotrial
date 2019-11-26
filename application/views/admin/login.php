@@ -5,8 +5,28 @@
 		</div>
 		<hr>
 		<div class="tab-content">
+			<?php
+			$error_msg = $this->session->flashdata('error');
+				if(isset($error_msg)){ ?>
+				<div class="alert alert-danger alert-dismissible">
+				  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+				  <strong>Error!</strong> 
+				  <?php echo $error_msg;?>
+				</div>
+			<?php } ?>
+			<?php
+			$success_msg = $this->session->flashdata('success');
+				if(isset($success_msg)){ ?>
+				<div class="alert alert-success alert-dismissible">
+				  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+				  <strong>Success!</strong> 
+				  <?php echo $success_msg;?>
+				</div>
+			<?php } ?>
+
+
 			<div id="login" class="tab-pane active">
-				<form name="login" action="index.html">
+				<form name="login" action="<?php echo base_url('velankatgo');?>" method="POST">
 				    <p class="text-muted text-center">
 				        Enter your username and password
 				    </p>
@@ -41,7 +61,7 @@
 		<hr>
 		<div class="text-center">
 			<ul class="list-inline">
-			<li><a class="text-muted" href="#login" data-toggle="tab">Login</a></li>
+			<!-- <li><a class="text-muted" href="#login" data-toggle="tab">Login</a></li> -->
 			<li><a class="text-muted" href="#forgot" data-toggle="tab">Forgot Password</a></li>
 			<!-- <li><a class="text-muted" href="#signup" data-toggle="tab">Signup</a></li> -->
 			</ul>
@@ -52,7 +72,7 @@
 $(function() {
   // Initialize form validation on the registration form.
   // It has the name attribute "registration"
-  $("form[name='login']").validate({
+  $("form[name='login1']").validate({
     // Specify validation rules
     rules: {
       Username: {

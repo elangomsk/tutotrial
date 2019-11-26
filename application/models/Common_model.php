@@ -34,8 +34,8 @@ class Common_model extends CI_Model {
 				$this->db->limit($limit);
 			}
 			$this->db->from($table);
-			$query = $this->db->get();
-			return $result = $query->result();
+			return $query = $this->db->get();
+			 $result = $query->result();
 	}
 	/* Comments
 		To Send Email

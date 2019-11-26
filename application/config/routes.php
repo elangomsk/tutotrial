@@ -59,5 +59,7 @@ $admin = 'velankatgo';
 
 $route[$admin] = 'AdminController';
 $route[$admin.'/dashboard'] = 'AdminController/dashboard';
+$route[$admin.'/logout'] = 'AdminController/logout';
+$route[$admin.'/site_settings'] = 'AdminController/site_settings';
 $route[$admin.'/form'] = 'AdminController/form';
 $route[$admin.'/test'] = 'AdminController/test';

@@ -1,4 +1,4 @@
-<body class="  ">
+<body class=" menu-affix ">
   <div class="bg-dark dk" id="wrap">
     <div id="top">
       <!-- .navbar -->
@@ -24,29 +24,29 @@
               </a>
             </div>
             <div class="btn-group">
-              <a data-placement="bottom" data-original-title="E-mail" data-toggle="tooltip"
+              <!-- <a data-placement="bottom" data-original-title="E-mail" data-toggle="tooltip"
                 class="btn btn-default btn-sm">
                 <i class="fa fa-envelope"></i>
                 <span class="label label-warning">5</span>
-              </a>
+              </a> -->
               <a data-placement="bottom" data-original-title="Messages" href="#" data-toggle="tooltip"
                 class="btn btn-default btn-sm">
                 <i class="fa fa-comments"></i>
                 <span class="label label-danger">4</span>
               </a>
-              <a data-toggle="modal" data-original-title="Help" data-placement="bottom"
+              <!-- <a data-toggle="modal" data-original-title="Help" data-placement="bottom"
                 class="btn btn-default btn-sm"
                 href="#helpModal">
                 <i class="fa fa-question"></i>
-              </a>
+              </a> -->
             </div>
             <div class="btn-group">
-              <a href="login.html" data-toggle="tooltip" data-original-title="Logout" data-placement="bottom"
+              <a href="<?php //echo admin_redirect('logoutdf'); ?>" data-toggle="tooltip" data-original-title="Logout" data-placement="bottom"
                 class="btn btn-metis-1 btn-sm">
                 <i class="fa fa-power-off"></i>
               </a>
             </div>
-            <div class="btn-group">
+           <!--  <div class="btn-group">
               <a data-placement="bottom" data-original-title="Show / Hide Left" data-toggle="tooltip"
                 class="btn btn-primary btn-sm toggle-left" id="menu-toggle">
                 <i class="fa fa-bars"></i>
@@ -54,7 +54,7 @@
               <a href="#right" data-toggle="onoffcanvas" class="btn btn-default btn-sm" aria-expanded="false">
                 <span class="fa fa-fw fa-comment"></span>
               </a>
-            </div>
+            </div> -->
           </div>
 
           <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -62,7 +62,7 @@
             <!-- .nav -->
             <ul class="nav navbar-nav">
               <li class="active"><a href="dashboard.html">Dashboard</a></li>
-              <li><a href="table.html">Tables</a></li>
+              <!-- <li><a href="table.html">Tables</a></li>
               <li class='dropdown '>
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   Form Elements <b class="caret"></b>
@@ -73,7 +73,7 @@
                   <li><a href="form-wysiwyg.html">WYSIWYG</a></li>
                   <li><a href="form-wizard.html">Wizard &amp; File Upload</a></li>
                 </ul>
-              </li>
+              </li> -->
             </ul>
             <!-- /.nav -->
           </div>
@@ -121,7 +121,7 @@
           <div class="media-body">
             <h5 class="media-heading">Archie</h5>
             <ul class="list-unstyled user-info">
-              <li><a href="">Administrator</a></li>
+              <li><a href="<?php echo admin_url('site_settings');?>">Site settings</a></li>
               <li>Last Access : <br>
                 <small><i class="fa fa-calendar"></i>&nbsp;16 Mar 16:32</small>
               </li>
@@ -130,11 +130,11 @@
         </div>
       </div>
       <!-- #menu -->
-      <ul id="menu" class="bg-blue dker">
+      <ul id="menu" class="bg-dark dker" style="background-color: transparent !important;">
         <li class="nav-header">Menu</li>
         <li class="nav-divider"></li>
-        <li class="">
-          <a href="dashboard.html">
+        <li class="active">
+          <a href="dashboard">
             <i class="fa fa-dashboard"></i><span class="link-title">&nbsp;Dashboard</span>
           </a>
         </li>
@@ -219,7 +219,7 @@
             </li>
           </ul>
         </li>
-        <li class="">
+        <!-- <li class="">
           <a href="javascript:;">
             <i class="fa fa-tasks"></i>
             <span class="link-title">Components</span>
@@ -550,7 +550,7 @@
               </ul>
             </li>
           </ul>
-        </li>
+        </li> -->
       </ul>
         <!-- /#menu -->
     </div>

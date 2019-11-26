@@ -137,7 +137,7 @@ StyleSwitcher.prototype.build = function () {
     var colorList = $('<ul />').addClass('options').attr('data-type', 'colors');
     var colors = [
         {
-            'Hex': '#0088CC',
+            'Hex': '#303030',
             'colorName': 'Blue'
         },
         {

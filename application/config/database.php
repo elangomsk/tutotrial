@@ -80,7 +80,7 @@ $db['default'] = array(
 	'password' => '', //Koop@2017
 	'database' => 'tutorial',//koopimsc_Finance
 	'dbdriver' => 'mysqli', // sqlsrv
-	'dbprefix' => 'tut',
+	'dbprefix' => 'tut_',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
 	'cache_on' => FALSE,

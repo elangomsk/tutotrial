@@ -2396,6 +2396,7 @@ div.uploader {
 .bg-light.lter,
 .bg-light > .lter {
   background-color: #ffffff !important;
+  min-height: 56vw;
 }
 .bg-brillant {
   background: url("../img/pattern/brillant.png") repeat;

@@ -33,7 +33,7 @@
         <!-- animate.css stylesheet -->
         <link rel="stylesheet" href="<?php echo base_url('assets/lib/animate.css/animate.css');?>">
 
-
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.5/fullcalendar.min.css">
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

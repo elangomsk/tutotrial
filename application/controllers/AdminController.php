@@ -25,6 +25,7 @@ class AdminController extends CI_Controller {
     	$this->load->model('common_model');
     	$this->load->model('email_model');
     	$this->load->helper('common_helper');
+    	$this->load->library('encryption');
     }
 
 	public function index()
@@ -46,35 +47,98 @@ class AdminController extends CI_Controller {
 			
 		// 	echo "string";	
 		// }
+		// $data['view'] = 'login';
+				// throw new Exception('test');
+				// $this->load->view('admin/admin_template', $data);
+				// die;
 		try{
+			// echo $this->encryption->encrypt('12345');
+			// echo $this->encryption->decrypt('4000877d1ede0aee205cc8c3f64cace6004f91ef727b166fa1da8eba260fa7260de98e1bf67b4daed6f32081c9cf7e316b555b31c4684605038784e6877a9997J3vUDvqA9JkKNEaL5TWHKPPce1PyjBdVT4Iv64iozek=');
+			// die;
+			$admin_id = $this->session->userdata('logged_in');
+			if($admin_id != ''){
+				admin_redirect('dashboard');
 
-			echo encrypt1('test');
-			die;
-			$username = $this->input->post('Username');
-			$password = $this->input->post('Password');
-			$data['view'] = 'login';
-			// throw new Exception('test');
-			$this->load->view('admin/admin_template', $data);
+			}
+			if($this->input->post()){
+				$this->form_validation->set_rules('Username', 'Username', 'trim|required|xss_clean');
+				$this->form_validation->set_rules('Password', 'Password', 'trim|required|xss_clean');
 
+				if ($this->form_validation->run() == TRUE) {
+					$username = $this->input->post('Username');
+					$password = $this->input->post('Password');
+					$where = array('id'=>1);
+					$result = $this->common_model->getTableData('owner','',$where,'','');
+					$check_login = $result->num_rows();
+					
+					if($check_login > 0){
+						$response = $result->row();
+						$Uname = $this->encryption->decrypt($response->site_owner);
+						$pass  = $this->encryption->decrypt($response->password);
+						$logged_in  = $response->id;
 
+						if($username === $Uname && $password === $pass){
+							$newdata = array(
+							    'logged_in' => $logged_in
+							);
+
+							$this->session->set_userdata($newdata);
+							$this->session->set_flashdata('sucesss', "Login Sucesss");
+							admin_redirect('dashboard');
+						}else{
+							$this->session->set_flashdata('error', "Invalid user credentials");
+							admin_redirect();
+						}
+						
+					}else{
+						$this->session->set_flashdata('error', "Invalid user credentials");
+						admin_redirect();
+					}
+
+				}else{
+					$this->session->set_flashdata('error', validation_errors('<div class="error">', '</div>'));
+					admin_redirect();
+				}	
+			}else{
+				$data['view'] = 'login';
+				$this->load->view('admin/admin_template', $data);
+				
+			}
 		}catch(Exception $e){
-			print "something went wrong, caught yah! n";
 			var_dump($e->getMessage());
 			die;
 		}
-
-
-		// $data['view'] = 'login';
-		// $this->load->view('admin/admin_template', $data);
 	}
 
 	public function dashboard()
 	{
-		
-		$data['view'] = 'dashboard';
-		$this->load->view('admin/admin_template', $data);
+		try{
+			$admin_id = $this->session->userdata('logged_in');		
+			if(!empty($admin_id)){
+				$data['view'] = 'dashboard';
+				$this->load->view('admin/admin_template', $data);
+			}else{
+				$this->session->set_flashdata('error','Login first');
+				admin_redirect();
+			}
+		}catch(Exception $e){
+			var_dump($e->getMessage());
+			die;	
+		}
 	}
 
+	public function logout(){
+		$this->session->unset_userdata('logged_in');
+		$this->session->set_flashdata('success','Logout Sucesssfully.');
+		admin_redirect();
+	}
+
+	public function site_settings()
+	{
+		
+		$data['view'] = 'form';
+		$this->load->view('admin/admin_template', $data);
+	}
 	public function form()
 	{
 		
