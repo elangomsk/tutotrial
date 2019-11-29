@@ -24,11 +24,11 @@
               </a>
             </div>
             <div class="btn-group">
-              <!-- <a data-placement="bottom" data-original-title="E-mail" data-toggle="tooltip"
-                class="btn btn-default btn-sm">
+              <a data-placement="bottom" data-original-title="E-mail" data-toggle="tooltip"
+                class="btn btn-default btn-sm" href="<?php //echo admin_redirect('logout'); ?>">
                 <i class="fa fa-envelope"></i>
                 <span class="label label-warning">5</span>
-              </a> -->
+              </a>
               <a data-placement="bottom" data-original-title="Messages" href="#" data-toggle="tooltip"
                 class="btn btn-default btn-sm">
                 <i class="fa fa-comments"></i>
@@ -41,8 +41,7 @@
               </a> -->
             </div>
             <div class="btn-group">
-              <a href="<?php //echo admin_redirect('logoutdf'); ?>" data-toggle="tooltip" data-original-title="Logout" data-placement="bottom"
-                class="btn btn-metis-1 btn-sm">
+              <a href="<?php //echo admin_redirect('logout'); ?>" data-toggle="tooltip"  class="btn btn-metis-1 btn-sm">
                 <i class="fa fa-power-off"></i>
               </a>
             </div>
@@ -96,12 +95,12 @@
         </div>
           <!-- /.main-search -->                                
           <!-- /.search-bar -->
-          <div class="main-bar">
+          <!-- <div class="main-bar">
             <h3>
             <i class="fa fa-dashboard"></i>&nbsp;
             Dashboard
             </h3>
-          </div>
+          </div> -->
           <!-- /.main-bar -->
       </header>
         <!-- /.head -->
@@ -123,7 +122,9 @@
             <ul class="list-unstyled user-info">
               <li><a href="<?php echo admin_url('site_settings');?>">Site settings</a></li>
               <li>Last Access : <br>
-                <small><i class="fa fa-calendar"></i>&nbsp;16 Mar 16:32</small>
+                <small><i class="fa fa-calendar"></i>&nbsp;<?php 
+                $logged_at =$this->session->userdata('logged_at');
+                 echo date('d M h:i', strtotime($logged_at)); ?></small>
               </li>
             </ul>
           </div>

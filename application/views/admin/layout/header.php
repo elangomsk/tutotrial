@@ -33,7 +33,8 @@
         <!-- animate.css stylesheet -->
         <link rel="stylesheet" href="<?php echo base_url('assets/lib/animate.css/animate.css');?>">
 
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+        <link rel="stylesheet" href="<?php echo base_url('assets/lib/font-awesome/css/new_font.css');?>">
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.5/fullcalendar.min.css">
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -61,6 +62,7 @@
         
         <script src="<?php echo base_url('assets/lib/jquery/jquery.js');?>"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
         <script src="<?php echo base_url('assets/lib/bootstrap/js/bootstrap.js');?>"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
@@ -71,6 +73,8 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.selection.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.resize.min.js"></script>
         <script src="https://cdn.ckeditor.com/4.13.0/standard/ckeditor.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.2/js/bootstrap-switch.min.js"></script>
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.2/css/bootstrap3/bootstrap-switch.min.css">
         <!--Bootstrap -->
         <script src="<?php echo base_url('assets/lib/bootstrap/js/bootstrap.js');?>"></script>
         <!-- MetisMenu -->
@@ -100,6 +104,10 @@
         });
         });
         })(jQuery);
+        jQuery.validator.setDefaults({
+          debug: true
+        });
+
         </script>
 
     </head>

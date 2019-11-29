@@ -26,6 +26,11 @@ class AdminController extends CI_Controller {
     	$this->load->model('email_model');
     	$this->load->helper('common_helper');
     	$this->load->library('encryption');
+    	date_default_timezone_set("Asia/Kuala_Lumpur");
+    	if(getBlockedIP() == TRUE){
+    		echo "Your ip has been blocked";
+    		die;
+    	}
     }
 
 	public function index()
@@ -76,18 +81,71 @@ class AdminController extends CI_Controller {
 						$Uname = $this->encryption->decrypt($response->site_owner);
 						$pass  = $this->encryption->decrypt($response->password);
 						$logged_in  = $response->id;
+						$last_logged_at  = $response->logged_at;
 
 						if($username === $Uname && $password === $pass){
 							$newdata = array(
-							    'logged_in' => $logged_in
+							    'logged_in' => $logged_in,
+							    'logged_at' => $last_logged_at
 							);
 
 							$this->session->set_userdata($newdata);
+							$updatedata = array(
+								"logged_at" => date('Y-m-d h:i:s'),
+							);
+							$record = $this->common_model->UpdateTableData('owner',$updatedata,$where);
+							$ip  = $this->input->ip_address();
+							$insertData = array(
+								'type' => 'login Sucesss', 
+								'message' => 'Sucesssfully logged in', 
+								'ip' => $ip, 
+								'user_agent' => user_agent(),
+								'location' => getLocation($ip),
+							);
+
+							$record = $this->common_model->insertTableData('admin_activity',$insertData);
 							$this->session->set_flashdata('sucesss', "Login Sucesss");
 							admin_redirect('dashboard');
 						}else{
-							$this->session->set_flashdata('error', "Invalid user credentials");
-							admin_redirect();
+							$ip  = $this->input->ip_address();
+							
+							$condition = array(
+								'Date(`created_at`)' => date("Y-m-d")
+							);
+							$check_count = $this->common_model->getTableData('admin_activity','',$condition,'','');
+							$check_ip_count = $check_count->num_rows();
+							$max_count = 3; 
+							if($check_ip_count < $max_count){
+								
+								$insertData = array(
+									'type' => 'Failed_login', 
+									'message' => 'Wrong Login attempt', 
+									'ip' => $ip, 
+									'user_agent' => user_agent(),
+									'location' => getLocation($ip),
+								);
+
+								$record = $this->common_model->insertTableData('admin_activity',$insertData);
+								if(!empty($record)){
+									$check_count = $this->common_model->getTableData('admin_activity','',$condition,'','');
+									$check_ip_count = $check_count->num_rows();
+									$attempt = $max_count - $check_ip_count;
+									if($attempt != 0){
+										$this->session->set_flashdata('error', "Invalid user credentials and remaining login attempt will be ".$attempt);
+										admin_redirect();
+									}else{
+										$this->session->set_flashdata('error', "Blocked ip");
+										admin_redirect();
+									}
+								}else{
+									$this->session->set_flashdata('error', "Something went to Wrong");
+									admin_redirect();
+								}
+							}else{
+								//blocking page
+								$this->session->set_flashdata('error', "blocking page");
+								admin_redirect();
+							}
 						}
 						
 					}else{
@@ -129,15 +187,35 @@ class AdminController extends CI_Controller {
 
 	public function logout(){
 		$this->session->unset_userdata('logged_in');
+		$this->session->unset_userdata('logged_at');
 		$this->session->set_flashdata('success','Logout Sucesssfully.');
 		admin_redirect();
 	}
 
 	public function site_settings()
 	{
-		
-		$data['view'] = 'form';
-		$this->load->view('admin/admin_template', $data);
+		try{
+			$admin_id = $this->session->userdata('logged_in');		
+			if(empty($admin_id)){
+				admin_redirect('login');
+			}
+			if($this->input->post()){
+				$site_username = $this->input->post('username');
+				$site_undermaintance = $this->input->post('site_undermaintance');
+				$site_und_content = $this->input->post('site_und_content');
+				if(isset($site_undermaintance)){
+					echo "string";
+				}
+				print_r($this->input->post());
+				die;
+			}
+
+
+			$data['view'] = 'site_settings';
+			$this->load->view('admin/admin_template', $data);
+		}catch(Exception $e){
+
+		}
 	}
 	public function form()
 	{
