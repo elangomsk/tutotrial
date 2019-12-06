@@ -36,6 +36,7 @@
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
         <link rel="stylesheet" href="<?php echo base_url('assets/lib/font-awesome/css/new_font.css');?>">
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.5/fullcalendar.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.12/css/dataTables.bootstrap.min.css">
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -87,9 +88,13 @@
         <script src="<?php echo base_url('assets/js/core.js');?>"></script>
         <!-- Metis demo scripts -->
         <script src="<?php echo base_url('assets/js/app.js');?>"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.12/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.12/js/dataTables.bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.26.6/js/jquery.tablesorter.min.js"></script>
         <link rel="stylesheet" href="<?php echo base_url('assets/css/style-switcher.css');?>">
         <link rel="stylesheet/less" type="text/css" href="<?php echo base_url('assets/less/theme.less');?>">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.7.1/less.js"></script>
+
         <script type="text/javascript">
         (function($) {
         $(document).ready(function() {
@@ -109,5 +114,10 @@
         });
 
         </script>
-
+        <script>
+            $(function() {
+              Metis.MetisTable();
+              Metis.metisSortable();
+            });
+        </script>
     </head>

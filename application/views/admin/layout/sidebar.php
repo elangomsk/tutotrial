@@ -139,6 +139,11 @@
             <i class="fa fa-dashboard"></i><span class="link-title">&nbsp;Dashboard</span>
           </a>
         </li>
+        <li class="active">
+          <a href="<?php echo admin_url('cms');?>">
+            <i class="fa fa-edit"></i><span class="link-title">&nbsp;CMS</span>
+          </a>
+        </li>
         <li class="">
           <a href="javascript:;">
             <i class="fa fa-building "></i>
@@ -149,74 +154,6 @@
             <li>
               <a href="boxed.html">
               <i class="fa fa-angle-right"></i>&nbsp; Boxed Layout </a>
-            </li>
-            <li>
-              <a href="fixed-header-boxed.html">
-              <i class="fa fa-angle-right"></i>&nbsp; Boxed Layout &amp; Fixed Header </a>
-            </li>
-            <li>
-              <a href="fixed-header-fixed-mini-sidebar.html">
-              <i class="fa fa-angle-right"></i>&nbsp; Fixed Header and Fixed Mini Menu </a>
-            </li>
-            <li>
-              <a href="fixed-header-menu.html">
-              <i class="fa fa-angle-right"></i>&nbsp; Fixed Header &amp; Menu </a>
-            </li>
-            <li>
-              <a href="fixed-header-mini-sidebar.html">
-              <i class="fa fa-angle-right"></i>&nbsp; Fixed Header &amp; Mini Menu </a>
-            </li>
-            <li>
-              <a href="fixed-header.html">
-              <i class="fa fa-angle-right"></i>&nbsp; Fixed Header </a>
-            </li>
-            <li>
-              <a href="fixed-menu-boxed.html">
-              <i class="fa fa-angle-right"></i>&nbsp; Boxed Layout &amp; Fixed Menu </a>
-            </li>
-            <li>
-              <a href="fixed-menu.html">
-              <i class="fa fa-angle-right"></i>&nbsp; Fixed Menu </a>
-            </li>
-            <li>
-              <a href="fixed-mini-sidebar.html">
-              <i class="fa fa-angle-right"></i>&nbsp; Fixed &amp; Mini Menu </a>
-            </li>
-            <li>
-              <a href="fxhmoxed.html">
-              <i class="fa fa-angle-right"></i>&nbsp; Boxed and Fixed Header &amp; Nav </a>
-            </li>
-            <li>
-              <a href="no-header-sidebar.html">
-              <i class="fa fa-angle-right"></i>&nbsp; No Header &amp; Sidebars </a>
-            </li>
-            <li>
-              <a href="no-header.html">
-              <i class="fa fa-angle-right"></i>&nbsp; No Header </a>
-            </li>
-            <li>
-              <a href="no-left-right-sidebar.html">
-              <i class="fa fa-angle-right"></i>&nbsp; No Left &amp; Right Sidebar </a>
-            </li>
-            <li>
-              <a href="no-left-sidebar-main-search.html">
-              <i class="fa fa-angle-right"></i>&nbsp; No Left Sidebar &amp; Main Search </a>
-            </li>
-            <li>
-              <a href="no-left-sidebar.html">
-              <i class="fa fa-angle-right"></i>&nbsp; No Left Sidebar </a>
-            </li>
-            <li>
-              <a href="no-main-search.html">
-              <i class="fa fa-angle-right"></i>&nbsp; No Main Search </a>
-            </li>
-            <li>
-              <a href="no-right-sidebar.html">
-              <i class="fa fa-angle-right"></i>&nbsp; No Right Sidebar </a>
-            </li>
-            <li>
-              <a href="sm.html">
-              <i class="fa fa-angle-right"></i>&nbsp; Mini Sidebar </a>
             </li>
           </ul>
         </li>

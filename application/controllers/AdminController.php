@@ -217,6 +217,28 @@ class AdminController extends CI_Controller {
 
 		}
 	}
+	public function cms($id=''){
+		try{
+			$admin_id = $this->session->userdata('logged_in');		
+			if(empty($admin_id)){
+				admin_redirect('login');
+			}
+			$display ='view';
+			$data['result'] = $this->common_model->getTableData('cms','','','','')->result_array();
+			if(isset($id) && !empty($id)){
+				$display = 'edit';
+				$where = array('link'=> $id);
+				$data['result'] = $this->common_model->getTableData('cms','',$where,'','')->row();
+			}
+			$data['display'] =$display;
+			$data['view'] =  'cms';
+			$this->load->view('admin/admin_template', $data);
+		}catch(Exception $e){
+
+		}
+
+	}
+
 	public function form()
 	{
 		
